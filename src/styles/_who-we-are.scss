@@ -1,0 +1,32 @@
+.who-we-are {
+  min-height: 400px;
+  padding-top: 148px;
+  background-color: $c-gray;
+}
+
+.who-we-are__inner {
+  width: min(716px, calc(100vw - 40px));
+  margin-left: max(20px, calc((100vw - 716px) / 2));
+  text-align: center;
+}
+
+.who-we-are__title {
+  width: min(100%, 420px);
+  margin: 0 auto 16px;
+  font-family: $font-heading;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 150%;
+  letter-spacing: 0;
+  color: #253757;
+}
+
+.who-we-are__text {
+  margin: 0;
+  font-family: $font-copy;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 150%;
+  letter-spacing: 0;
+  color: #6c788b;
+}
