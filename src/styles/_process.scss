@@ -13,6 +13,10 @@
 .process {
   padding: 64px 20px;
   background-color: #f3f6fa;
+
+  @include min($bp-small-desktop) {
+    padding: 145px 20px 120px;
+  }
 }
 
 .process__inner {
@@ -22,10 +26,22 @@
 
   width: min(100%, 1146px);
   margin-inline: auto;
+
+  @include min($bp-small-desktop) {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
 }
 
 .process__intro {
   width: 100%;
+
+  @include min($bp-small-desktop) {
+    flex-shrink: 0;
+    width: 330px;
+    padding-top: 113px;
+  }
 }
 
 .process__title {
@@ -60,6 +76,16 @@
   display: grid;
   grid-template-columns: 1fr;
   gap: 30px;
+
+  @include min($bp-tablet) {
+    grid-template-columns: repeat(2, 264px);
+    justify-content: center;
+    margin-top: 132px;
+  }
+
+  @include min($bp-small-desktop) {
+    justify-content: flex-end;
+  }
 }
 
 .process-card {
@@ -78,9 +104,24 @@
     transform 0.3s ease,
     box-shadow 0.3s ease;
 
+  @include min($bp-tablet) {
+    width: 264px;
+    height: 264px;
+  }
+
   &:hover {
     box-shadow: 0 16px 32px 0 #25293114;
     transform: scale(1.05);
+  }
+}
+
+.process-card--raised {
+  @include min($bp-tablet) {
+    transform: translateY(-50%);
+
+    &:hover {
+      transform: translateY(-50%) scale(1.05);
+    }
   }
 }
 
@@ -166,47 +207,4 @@
   stroke-width: 2;
   stroke-linecap: round;
   stroke-linejoin: round;
-}
-
-@media (min-width: 640px) {
-  .process__grid {
-    grid-template-columns: repeat(2, 264px);
-    justify-content: center;
-    margin-top: 132px;
-  }
-
-  .process-card {
-    width: 264px;
-    height: 264px;
-  }
-
-  .process-card--raised {
-    transform: translateY(-50%);
-
-    &:hover {
-      transform: translateY(-50%) scale(1.05);
-    }
-  }
-}
-
-@media (min-width: 1024px) {
-  .process {
-    padding: 145px 20px 120px;
-  }
-
-  .process__inner {
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: space-between;
-  }
-
-  .process__intro {
-    flex-shrink: 0;
-    width: 330px;
-    padding-top: 113px;
-  }
-
-  .process__grid {
-    justify-content: flex-end;
-  }
 }
