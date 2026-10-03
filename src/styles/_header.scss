@@ -21,7 +21,11 @@
     margin-inline: auto;
     padding-inline: 20px;
 
-    @include min($bp-small-desktop) {
+    @include min($bp-tablet) {
+      padding-inline: 40px;
+    }
+
+    @include min($bp-desktop) {
       padding-inline: 14.19%;
     }
   }
@@ -96,10 +100,14 @@
       align-items: center;
       justify-content: space-between;
 
-      margin-left: 48px;
+      margin-left: 32px;
       padding: 0;
 
       background-color: transparent;
+    }
+
+    @include min($bp-desktop) {
+      margin-left: 48px;
     }
   }
 
@@ -116,6 +124,10 @@
 
     @include min($bp-small-desktop) {
       flex-direction: row;
+      gap: 28px;
+    }
+
+    @include min($bp-desktop) {
       gap: 48px;
     }
   }
